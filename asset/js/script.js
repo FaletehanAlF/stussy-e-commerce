@@ -231,7 +231,6 @@
     var hero = document.querySelector('.hero');
     var heroTitle = document.querySelector('.hero-title');
     var heroContent = document.querySelector('.hero-content');
-    var productScene = document.querySelector('.hero-product-scene');
     if (!hero || !heroTitle) return;
 
     hero.setAttribute('data-parallax', '');
@@ -249,12 +248,6 @@
       if (heroContent) {
         heroContent.style.transform = 'translateY(' + (scrollY * 0.06) + 'px)';
         heroContent.style.opacity = 1 - ratio * 0.4;
-      }
-
-      // Product scene slight parallax
-      if (productScene) {
-        productScene.style.transform = 'translateY(' + (scrollY * 0.1) + 'px)';
-        productScene.style.opacity = 1 - ratio * 0.5;
       }
     }, { passive: true });
   }
