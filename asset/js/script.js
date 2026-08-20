@@ -1,6 +1,6 @@
 /* ==========================================================
    STUSSY LANDING — script.js
-   Pure B&W, zero-fetch product rendering
+   Pure B&W, zero-fetch, capsule navbar
    ========================================================== */
 
 (function () {
@@ -18,40 +18,20 @@
     { id: 'p08', name: 'Tool Bag Crossbody', cat: 'accessories', price: 549000, badge: '',       desc: 'Cordura 1000D, strap adjustable, water resist.' }
   ];
 
-  var cartCount = 0;
-
   /* ==================== INIT ==================== */
   document.addEventListener('DOMContentLoaded', function () {
     renderProducts(PRODUCTS);
-    initFeather();
     initNavbar();
     initMobileMenu();
     initActiveLink();
     initCategoryFilter();
-    initAuthModal();
     initContactForm();
     initNewsletter();
-    initCartButtons();
     initScrollReveal();
 
     var yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
   });
-
-  /* ==================== FEATHER ICONS ==================== */
-  function initFeather() {
-    if (typeof feather !== 'undefined') {
-      feather.replace({ 'stroke-width': 1.75 });
-    } else {
-      window.addEventListener('load', function () {
-        if (typeof feather !== 'undefined') feather.replace({ 'stroke-width': 1.75 });
-      });
-    }
-  }
-
-  function refreshIcons() {
-    if (typeof feather !== 'undefined') feather.replace({ 'stroke-width': 1.75 });
-  }
 
   /* ==================== PRODUCTS ==================== */
   function formatPrice(n) {
@@ -91,7 +71,7 @@
         '<div class="product-info">' +
           '<div class="product-info-top">' +
             '<span class="product-cat">' + p.cat + '</span>' +
-            '<button class="add-btn" aria-label="Tambah ' + p.name + ' ke keranjang" data-add="' + p.id + '">' +
+            '<button class="add-btn" aria-label="Tambah ' + p.name + '" data-add="' + p.id + '">' +
               '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>' +
             '</button>' +
           '</div>' +
@@ -105,7 +85,6 @@
 
       grid.appendChild(card);
 
-      // staggered entrance
       setTimeout(function () {
         card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
         card.style.opacity = '1';
@@ -155,23 +134,13 @@
   }
 
   /* ==================== ADD TO CART ==================== */
-  function initCartButtons() {
-    bindAddToCart();
-  }
-
   function bindAddToCart() {
     var buttons = document.querySelectorAll('[data-add]');
     buttons.forEach(function (btn) {
       btn.addEventListener('click', function (e) {
         e.stopPropagation();
-        cartCount++;
-        var counter = document.getElementById('cartCount');
-        if (counter) counter.textContent = cartCount;
-
-        // bounce animation
         btn.style.transform = 'scale(1.3)';
         setTimeout(function () { btn.style.transform = ''; }, 200);
-
         showToast('Ditambahkan ke keranjang');
       });
     });
@@ -207,11 +176,6 @@
     menu.querySelectorAll('.nav-link').forEach(function (link) {
       link.addEventListener('click', closeMenu);
     });
-
-    var loginM = document.getElementById('loginBtnMobile');
-    var regM = document.getElementById('registerBtnMobile');
-    if (loginM) loginM.addEventListener('click', function () { closeMenu(); openModal('login'); });
-    if (regM) regM.addEventListener('click', function () { closeMenu(); openModal('register'); });
   }
 
   /* ==================== ACTIVE NAV LINK ==================== */
@@ -249,59 +213,6 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
     els.forEach(function (el) { observer.observe(el); });
-  }
-
-  /* ==================== AUTH MODAL ==================== */
-  function initAuthModal() {
-    var overlay = document.getElementById('modalOverlay');
-    var closeBtn = document.getElementById('modalClose');
-    var loginBtn = document.getElementById('loginBtn');
-    var regBtn = document.getElementById('registerBtn');
-    var tabLogin = document.getElementById('tabLogin');
-    var tabReg = document.getElementById('tabRegister');
-    var loginForm = document.getElementById('loginForm');
-    var regForm = document.getElementById('registerForm');
-    if (!overlay) return;
-
-    if (loginBtn) loginBtn.addEventListener('click', function () { openModal('login'); });
-    if (regBtn) regBtn.addEventListener('click', function () { openModal('register'); });
-    if (closeBtn) closeBtn.addEventListener('click', closeModal);
-    overlay.addEventListener('click', function (e) { if (e.target === overlay) closeModal(); });
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
-
-    if (tabLogin) tabLogin.addEventListener('click', function () { switchTab('login'); });
-    if (tabReg) tabReg.addEventListener('click', function () { switchTab('register'); });
-
-    if (loginForm) loginForm.addEventListener('submit', function (e) {
-      e.preventDefault(); closeModal(); showToast('Login berhasil (demo)');
-    });
-    if (regForm) regForm.addEventListener('submit', function (e) {
-      e.preventDefault(); closeModal(); showToast('Akun berhasil dibuat (demo)');
-    });
-  }
-
-  function switchTab(tab) {
-    var tl = document.getElementById('tabLogin');
-    var tr = document.getElementById('tabRegister');
-    var fl = document.getElementById('loginForm');
-    var fr = document.getElementById('registerForm');
-    if (tl) tl.classList.toggle('active', tab === 'login');
-    if (tr) tr.classList.toggle('active', tab === 'register');
-    if (fl) fl.classList.toggle('active', tab === 'login');
-    if (fr) fr.classList.toggle('active', tab === 'register');
-  }
-
-  function openModal(tab) {
-    switchTab(tab);
-    var overlay = document.getElementById('modalOverlay');
-    if (overlay) overlay.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeModal() {
-    var overlay = document.getElementById('modalOverlay');
-    if (overlay) overlay.classList.remove('open');
-    document.body.style.overflow = '';
   }
 
   /* ==================== CONTACT FORM ==================== */

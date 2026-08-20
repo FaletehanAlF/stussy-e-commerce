@@ -8,9 +8,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Permanent+Marker&display=swap" rel="stylesheet">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.1/feather.min.js" defer></script>
 <link rel="stylesheet" href="asset/css/style.css">
 </head>
 <body>
@@ -18,11 +17,6 @@
 <!-- ================= NAVBAR ================= -->
 <header class="navbar" id="navbar">
   <div class="nav-inner">
-    <a href="#home" class="logo" aria-label="STUSSY Home">
-      <span class="logo-mark">S</span>
-      <span class="logo-word">STUSSY</span>
-    </a>
-
     <nav class="nav-links" id="navLinks">
       <a href="#home" class="nav-link active">Home</a>
       <a href="#about" class="nav-link">About</a>
@@ -32,17 +26,9 @@
       <a href="#contact" class="nav-link">Contact</a>
     </nav>
 
-    <div class="nav-actions">
-      <button class="icon-btn" id="searchBtn" aria-label="Cari produk">
-        <i data-feather="search"></i>
-      </button>
-      <button class="icon-btn" id="cartBtn" aria-label="Keranjang belanja">
-        <i data-feather="shopping-bag"></i>
-        <span class="cart-count" id="cartCount">0</span>
-      </button>
-      <button class="btn btn-ghost" id="loginBtn"><i data-feather="log-in"></i> Login</button>
-      <button class="btn btn-solid" id="registerBtn"><i data-feather="user-plus"></i> Register</button>
-    </div>
+    <a href="#home" class="nav-logo" aria-label="STUSSY Home">
+      <img src="asset/image/image copy.png" alt="STUSSY" class="nav-logo-img">
+    </a>
 
     <button class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -58,91 +44,82 @@
   <a href="#produk" class="nav-link">Produk</a>
   <a href="#review" class="nav-link">Review</a>
   <a href="#contact" class="nav-link">Contact</a>
-  <div class="mobile-actions">
-    <button class="btn btn-ghost" id="loginBtnMobile"><i data-feather="log-in"></i> Login</button>
-    <button class="btn btn-solid" id="registerBtnMobile"><i data-feather="user-plus"></i> Register</button>
-  </div>
 </div>
 
 <main>
 <!-- ================= HERO ================= -->
 <section class="hero" id="home">
   <div class="hero-inner">
-    <div class="hero-copy">
-      <p class="eyebrow">// DROP 09 — SEKARANG TERSEDIA</p>
-      <h1 class="hero-title">
-        SERAGAM JALANAN<br>
-        UNTUK YANG <span class="stroke-text">TAK TERUSIK</span>
-      </h1>
-      <p class="hero-desc">
-        Dari garasi surfing California tahun 80-an sampai ke sudut jalan kotamu.
-        Stussy bukan sekadar merek — ini tanda pengenal komunitas.
-      </p>
-      <div class="hero-cta">
-        <a href="#produk" class="btn btn-solid btn-lg"><i data-feather="shopping-bag"></i> Belanja Sekarang</a>
-        <a href="#about" class="btn btn-outline btn-lg"><i data-feather="arrow-right"></i> Cerita Kami</a>
-      </div>
-      <div class="hero-social-proof">
-        <div class="hero-avatars">
-          <img src="https://i.pravatar.cc/80?img=1" alt="Pengunjung" class="hero-avatar">
-          <img src="https://i.pravatar.cc/80?img=5" alt="Pengunjung" class="hero-avatar">
-          <img src="https://i.pravatar.cc/80?img=8" alt="Pengunjung" class="hero-avatar">
-          <img src="https://i.pravatar.cc/80?img=11" alt="Pengunjung" class="hero-avatar">
-        </div>
-        <div class="hero-social-text">
-          <strong>120K+</strong> <span>anggota tribe bergabung</span>
-        </div>
-      </div>
-      <div class="hero-stats">
-        <div class="stat"><strong>40+</strong><span>Tahun Warisan</span></div>
-        <div class="stat"><strong>120K</strong><span>Anggota Tribe</span></div>
-        <div class="stat"><strong>4.9/5</strong><span>Rating Pembeli</span></div>
-      </div>
-    </div>
-
-    <div class="hero-stage">
-      <div class="hero-product-card">
-        <span class="hero-product-badge"><i data-feather="zap"></i> NEW</span>
-        <div class="hero-product-visual">
-          <img src="https://placehold.co/500x625/111/fff?font=montserrat&text=8-BALL%20TEE" alt="8-Ball Tee" loading="lazy">
-        </div>
-        <div class="hero-product-info">
-          <h3 class="hero-product-name">8-Ball Tee</h3>
-          <p class="hero-product-desc">Katun 240gsm, sablon puff signature bola 8.</p>
-          <div class="hero-product-bottom">
-            <span class="hero-product-price">Rp 449.000</span>
-            <a href="#produk" class="hero-product-btn"><i data-feather="arrow-right"></i> Lihat</a>
-          </div>
-        </div>
-      </div>
+    <p class="hero-eyebrow">International Stussy Tribe</p>
+    <h1 class="hero-title">STUSSY</h1>
+    <p class="hero-sub">Since 1980. From the streets, for the streets.</p>
+    <div class="hero-line"></div>
+    <div class="hero-cta">
+      <a href="#produk" class="btn btn-solid btn-lg">Shop Now</a>
+      <a href="#about" class="btn btn-ghost btn-lg">Read Story</a>
     </div>
   </div>
 </section>
 
 <!-- ================= ABOUT ================= -->
 <section class="about" id="about">
-  <div class="section-inner about-grid">
-    <div class="about-content">
-      <p class="eyebrow">// ABOUT</p>
-      <h2 class="section-title reveal">Dari Papan Selancar<br>ke Budaya Global</h2>
-      <p class="about-text reveal reveal-delay-1">
-        Shawn Stussy mulai menuliskan tanda tangannya di papan selancar buatan tangan.
-        Coretan spidol itu kini menjadi salah satu logo paling dikenali di dunia streetwear.
-        Kami merawat semangat yang sama: dibuat oleh komunitas, untuk komunitas.
-      </p>
-      <ul class="about-list reveal reveal-delay-2">
-        <li><i data-feather="check-circle"></i> Material dipilih tangan, teruji lapangan</li>
-        <li><i data-feather="check-circle"></i> Produksi terbatas tiap drop</li>
-        <li><i data-feather="check-circle"></i> Kolaborasi lintas kota &amp; komunitas</li>
-      </ul>
-      <a href="#produk" class="btn btn-outline reveal reveal-delay-3">Lihat Koleksi <i data-feather="arrow-up-right"></i></a>
+  <div class="section-inner">
+    <div class="about-header reveal">
+      <p class="eyebrow center">// ABOUT</p>
+      <h2 class="section-title center">Tentang Website Ini</h2>
     </div>
-    <div class="about-visual reveal" aria-hidden="true">
-      <div class="about-card card-1">
-        <img src="https://placehold.co/400x280/111/fff?font=montserrat&text=STUSSY+HERITAGE" alt="Stussy Heritage" loading="lazy">
+
+    <div class="about-grid">
+      <div class="about-content reveal">
+        <p class="about-text">
+          Website ini adalah landing page promosi untuk koleksi streetwear Stussy.
+          Didesain dengan estetika monokrom murni — hitam dan putih — untuk menangkap
+          esensi brutalis yang menjadi identitas visual brand sejak 1980.
+        </p>
+        <p class="about-text">
+          Setiap elemen dibangun dari nol menggunakan HTML, CSS, dan JavaScript murni.
+          Tanpa framework, tanpa library — murni kode bersih yang mengutamakan
+          kecepatan, aksesibilitas, dan pengalaman pengguna yang mulus.
+        </p>
+        <div class="about-stats">
+          <div class="about-stat">
+            <span class="about-stat-num">0</span>
+            <span class="about-stat-label">Framework</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-num">3</span>
+            <span class="about-stat-label">Teknologi</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-num">100%</span>
+            <span class="about-stat-label">Vanilla Code</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-num">B&W</span>
+            <span class="about-stat-label">Pure Palette</span>
+          </div>
+        </div>
       </div>
-      <div class="about-card card-2">
-        <img src="https://placehold.co/400x280/fff/000?font=montserrat&text=CALIFORNIA+1980" alt="California 1980" loading="lazy">
+
+      <div class="about-visual reveal">
+        <div class="about-card about-card-1">
+          <div class="about-card-inner">
+            <span class="about-card-year">1980</span>
+            <span class="about-card-text">Surf Culture</span>
+          </div>
+        </div>
+        <div class="about-card about-card-2">
+          <div class="about-card-inner">
+            <span class="about-card-year">NOW</span>
+            <span class="about-card-text">Street Legacy</span>
+          </div>
+        </div>
+        <div class="about-card about-card-3">
+          <div class="about-card-inner">
+            <span class="about-card-year">2026</span>
+            <span class="about-card-text">Digital Drop</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -156,39 +133,39 @@
     <div class="category-grid" id="categoryGrid">
       <button class="cat-card reveal reveal-delay-1" data-filter="tees">
         <div class="cat-card-img">
-          <img src="https://placehold.co/400x250/1a1a1a/fff?font=montserrat&text=TEES" alt="Tees" loading="lazy">
+          <img src="https://placehold.co/400x400/1a1a1a/fff?font=montserrat&text=TEES" alt="Tees" loading="lazy">
         </div>
-        <div class="cat-card-label"><i data-feather="crop"></i><span>Tees</span></div>
+        <div class="cat-card-label"><span>Tees</span></div>
       </button>
       <button class="cat-card reveal reveal-delay-2" data-filter="hoodies">
         <div class="cat-card-img">
-          <img src="https://placehold.co/400x250/282828/fff?font=montserrat&text=HOODIES" alt="Hoodies" loading="lazy">
+          <img src="https://placehold.co/400x400/282828/fff?font=montserrat&text=HOODIES" alt="Hoodies" loading="lazy">
         </div>
-        <div class="cat-card-label"><i data-feather="wind"></i><span>Hoodies</span></div>
+        <div class="cat-card-label"><span>Hoodies</span></div>
       </button>
       <button class="cat-card reveal reveal-delay-3" data-filter="headwear">
         <div class="cat-card-img">
-          <img src="https://placehold.co/400x250/222/fff?font=montserrat&text=HEADWEAR" alt="Headwear" loading="lazy">
+          <img src="https://placehold.co/400x400/222/fff?font=montserrat&text=HEADWEAR" alt="Headwear" loading="lazy">
         </div>
-        <div class="cat-card-label"><i data-feather="circle"></i><span>Headwear</span></div>
+        <div class="cat-card-label"><span>Headwear</span></div>
       </button>
       <button class="cat-card reveal reveal-delay-1" data-filter="outerwear">
         <div class="cat-card-img">
-          <img src="https://placehold.co/400x250/151515/fff?font=montserrat&text=OUTERWEAR" alt="Outerwear" loading="lazy">
+          <img src="https://placehold.co/400x400/151515/fff?font=montserrat&text=OUTERWEAR" alt="Outerwear" loading="lazy">
         </div>
-        <div class="cat-card-label"><i data-feather="cloud-snow"></i><span>Outerwear</span></div>
+        <div class="cat-card-label"><span>Outerwear</span></div>
       </button>
       <button class="cat-card reveal reveal-delay-2" data-filter="accessories">
         <div class="cat-card-img">
-          <img src="https://placehold.co/400x250/222222/fff?font=montserrat&text=ACCESSORIES" alt="Accessories" loading="lazy">
+          <img src="https://placehold.co/400x400/222222/fff?font=montserrat&text=ACCESSORIES" alt="Accessories" loading="lazy">
         </div>
-        <div class="cat-card-label"><i data-feather="watch"></i><span>Accessories</span></div>
+        <div class="cat-card-label"><span>Accessories</span></div>
       </button>
       <button class="cat-card active reveal reveal-delay-3" data-filter="all">
         <div class="cat-card-img">
-          <img src="https://placehold.co/400x250/333/fff?font=montserrat&text=SEMUA+PRODUK" alt="Semua Produk" loading="lazy">
+          <img src="https://placehold.co/400x400/333/fff?font=montserrat&text=SEMUA+PRODUK" alt="Semua Produk" loading="lazy">
         </div>
-        <div class="cat-card-label"><i data-feather="grid"></i><span>Semua</span></div>
+        <div class="cat-card-label"><span>Semua</span></div>
       </button>
     </div>
   </div>
@@ -217,7 +194,7 @@
 
     <div class="review-track" id="reviewTrack">
       <article class="review-card reveal reveal-delay-1">
-        <div class="stars">★★★★★</div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <p>"Bahan hoodie-nya tebal banget, jahitan rapi. Pas dipakai gak panas walau brushed fleece."</p>
         <div class="reviewer">
           <img src="https://i.pravatar.cc/80?img=12" alt="Raka A." class="avatar">
@@ -225,7 +202,7 @@
         </div>
       </article>
       <article class="review-card reveal reveal-delay-2">
-        <div class="stars">★★★★★</div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <p>"Sablon puff di tee-nya awet, udah 2 tahun dicuci bolak-balik masih bagus."</p>
         <div class="reviewer">
           <img src="https://i.pravatar.cc/80?img=32" alt="Dinda N." class="avatar">
@@ -233,7 +210,7 @@
         </div>
       </article>
       <article class="review-card reveal reveal-delay-3">
-        <div class="stars">★★★★☆</div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
         <p>"Ukuran true to size, cocok buat boxy fit. Pengiriman cepat, packing aman."</p>
         <div class="reviewer">
           <img src="https://i.pravatar.cc/80?img=53" alt="Fikri M." class="avatar">
@@ -241,7 +218,7 @@
         </div>
       </article>
       <article class="review-card reveal reveal-delay-4">
-        <div class="stars">★★★★★</div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <p>"Cap-nya solid, strapback logamnya kokoh. Worth banget buat harian."</p>
         <div class="reviewer">
           <img src="https://i.pravatar.cc/80?img=25" alt="Sinta W." class="avatar">
@@ -254,62 +231,100 @@
 
 <!-- ================= CONTACT ================= -->
 <section class="contact" id="contact">
-  <div class="section-inner contact-grid">
-    <div class="contact-info">
-      <p class="eyebrow">// CONTACT</p>
-      <h2 class="section-title reveal">Ada Pertanyaan?<br>Kabari Kami</h2>
-      <p class="about-text reveal reveal-delay-1">Tim kami balas dalam 1x24 jam pada hari kerja.</p>
-
-      <div class="info-item reveal reveal-delay-2"><i data-feather="map-pin"></i> Jl. Pantai Santai No. 8, Bandung, Indonesia</div>
-      <div class="info-item reveal reveal-delay-2"><i data-feather="mail"></i> hello@stussy-tribe.id</div>
-      <div class="info-item reveal reveal-delay-2"><i data-feather="phone"></i> +62 812-3456-7890</div>
-
-      <div class="social-row reveal reveal-delay-3">
-        <a href="#" class="icon-btn" aria-label="Instagram"><i data-feather="instagram"></i></a>
-        <a href="#" class="icon-btn" aria-label="Twitter"><i data-feather="twitter"></i></a>
-        <a href="#" class="icon-btn" aria-label="Youtube"><i data-feather="youtube"></i></a>
-      </div>
+  <div class="section-inner">
+    <div class="contact-header reveal">
+      <p class="eyebrow center">// CONTACT</p>
+      <h2 class="section-title center">Hubungi Kami</h2>
+      <p class="contact-subtitle">Pertanyaan, saran, atau sekadar say hi — kami baca semua.</p>
     </div>
 
-    <form class="contact-form reveal" id="contactForm" novalidate>
-      <div class="field">
-        <label for="username">Username</label>
-        <div class="input-wrap">
-          <i data-feather="user"></i>
-          <input type="text" id="username" name="username" placeholder="nama_kamu" required minlength="3">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-info-card">
+          <div class="contact-info-item">
+            <div class="contact-icon">✉</div>
+            <div>
+              <span class="contact-label">Email</span>
+              <span class="contact-value">hello@stussy-tribe.id</span>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">☎</div>
+            <div>
+              <span class="contact-label">Telepon</span>
+              <span class="contact-value">+62 812-3456-7890</span>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">◎</div>
+            <div>
+              <span class="contact-label">Lokasi</span>
+              <span class="contact-value">Bandung, Indonesia</span>
+            </div>
+          </div>
         </div>
-        <span class="field-error" id="err-username"></span>
+        <div class="contact-social">
+          <a href="#" class="contact-social-link" aria-label="Instagram">Instagram</a>
+          <a href="#" class="contact-social-link" aria-label="Twitter">Twitter</a>
+          <a href="#" class="contact-social-link" aria-label="YouTube">YouTube</a>
+        </div>
       </div>
 
-      <div class="field">
-        <label for="email">Email</label>
-        <div class="input-wrap">
-          <i data-feather="mail"></i>
-          <input type="email" id="email" name="email" placeholder="kamu@email.com" required>
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="field">
+          <label for="username">Username</label>
+          <div class="input-wrap">
+            <input type="text" id="username" name="username" placeholder="nama_kamu" required minlength="3">
+          </div>
+          <span class="field-error" id="err-username"></span>
         </div>
-        <span class="field-error" id="err-email"></span>
-      </div>
 
-      <div class="field">
-        <label for="message">Message</label>
-        <div class="input-wrap textarea-wrap">
-          <i data-feather="message-square"></i>
-          <textarea id="message" name="message" rows="4" placeholder="Tulis pesanmu di sini..." required minlength="10"></textarea>
+        <div class="field">
+          <label for="email">Email</label>
+          <div class="input-wrap">
+            <input type="email" id="email" name="email" placeholder="kamu@email.com" required>
+          </div>
+          <span class="field-error" id="err-email"></span>
         </div>
-        <span class="field-error" id="err-message"></span>
-      </div>
 
-      <button type="submit" class="btn btn-solid btn-lg full-width">
-        Kirim Pesan <i data-feather="send"></i>
-      </button>
+        <div class="field">
+          <label for="message">Message</label>
+          <div class="input-wrap textarea-wrap">
+            <textarea id="message" name="message" rows="4" placeholder="Tulis pesanmu di sini..." required minlength="10"></textarea>
+          </div>
+          <span class="field-error" id="err-message"></span>
+        </div>
 
-      <p class="form-success" id="formSuccess">
-        <i data-feather="check-circle"></i> Pesan terkirim! Kami akan segera menghubungimu.
-      </p>
-    </form>
+        <button type="submit" class="btn btn-solid btn-lg full-width">Kirim Pesan</button>
+
+        <p class="form-success" id="formSuccess">Pesan terkirim! Kami akan segera menghubungimu.</p>
+      </form>
+    </div>
   </div>
 </section>
 </main>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span class="marquee-text">STUSSY</span>
+    <span class="marquee-dot">&bull;</span>
+    <span class="marquee-text">STUSSY</span>
+    <span class="marquee-dot">&bull;</span>
+    <span class="marquee-text">STUSSY</span>
+    <span class="marquee-dot">&bull;</span>
+    <span class="marquee-text">STUSSY</span>
+    <span class="marquee-dot">&bull;</span>
+    <span class="marquee-text">STUSSY</span>
+    <span class="marquee-dot">&bull;</span>
+    <span class="marquee-text">STUSSY</span>
+    <span class="marquee-dot">&bull;</span>
+    <span class="marquee-text">STUSSY</span>
+    <span class="marquee-dot">&bull;</span>
+    <span class="marquee-text">STUSSY</span>
+    <span class="marquee-dot">&bull;</span>
+  </div>
+</div>
 
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
@@ -321,15 +336,15 @@
       </a>
       <p>International Stussy Tribe. Streetwear sejak 1980, dibuat oleh komunitas untuk komunitas.</p>
       <div class="social-row">
-        <a href="#" class="icon-btn" aria-label="Instagram"><i data-feather="instagram"></i></a>
-        <a href="#" class="icon-btn" aria-label="Twitter"><i data-feather="twitter"></i></a>
-        <a href="#" class="icon-btn" aria-label="Youtube"><i data-feather="youtube"></i></a>
-        <a href="#" class="icon-btn" aria-label="Facebook"><i data-feather="facebook"></i></a>
+        <a href="#" class="icon-btn" aria-label="Instagram">IG</a>
+        <a href="#" class="icon-btn" aria-label="Twitter">TW</a>
+        <a href="#" class="icon-btn" aria-label="Youtube">YT</a>
+        <a href="#" class="icon-btn" aria-label="Facebook">FB</a>
       </div>
     </div>
 
     <div class="footer-col">
-      <h4><i data-feather="shopping-bag"></i> Belanja</h4>
+      <h4>Belanja</h4>
       <a href="#produk">Semua Produk</a>
       <a href="#category">Tees</a>
       <a href="#category">Hoodies</a>
@@ -337,7 +352,7 @@
     </div>
 
     <div class="footer-col">
-      <h4><i data-feather="building"></i> Perusahaan</h4>
+      <h4>Perusahaan</h4>
       <a href="#about">Tentang Kami</a>
       <a href="#review">Review</a>
       <a href="#contact">Kontak</a>
@@ -345,63 +360,21 @@
     </div>
 
     <div class="footer-col newsletter-col">
-      <h4><i data-feather="mail"></i> Newsletter</h4>
+      <h4>Newsletter</h4>
       <p>Info drop terbaru langsung ke email-mu.</p>
       <form class="newsletter-form" id="newsletterForm">
         <input type="email" placeholder="Email kamu" required aria-label="Email newsletter">
-        <button type="submit" aria-label="Subscribe"><i data-feather="arrow-right"></i></button>
+        <button type="submit" aria-label="Subscribe">&#8594;</button>
       </form>
       <span class="newsletter-msg" id="newsletterMsg"></span>
     </div>
   </div>
 
-  <div class="footer-bottom">
-    <p>&copy; <span id="year"></span> Stussy Tribe. Landing page demo — bukan situs resmi.</p>
-    <div class="footer-legal">
-      <a href="#"><i data-feather="shield"></i> Privacy Policy</a>
-      <a href="#"><i data-feather="file-text"></i> Terms of Service</a>
-    </div>
-  </div>
+
 </footer>
 
-<!-- ================= AUTH MODAL ================= -->
-<div class="modal-overlay" id="modalOverlay">
-  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <button class="modal-close" id="modalClose" aria-label="Tutup"><i data-feather="x"></i></button>
-    <div class="modal-tabs">
-      <button class="modal-tab active" data-tab="login" id="tabLogin">Login</button>
-      <button class="modal-tab" data-tab="register" id="tabRegister">Register</button>
-    </div>
-
-    <form class="modal-form active" id="loginForm">
-      <h3 id="modalTitle">Selamat Datang Kembali</h3>
-      <div class="field">
-        <div class="input-wrap"><i data-feather="mail"></i><input type="email" placeholder="Email" required></div>
-      </div>
-      <div class="field">
-        <div class="input-wrap"><i data-feather="lock"></i><input type="password" placeholder="Password" required></div>
-      </div>
-      <button type="submit" class="btn btn-solid full-width"><i data-feather="log-in"></i> Masuk</button>
-    </form>
-
-    <form class="modal-form" id="registerForm">
-      <h3>Gabung Tribe</h3>
-      <div class="field">
-        <div class="input-wrap"><i data-feather="user"></i><input type="text" placeholder="Username" required></div>
-      </div>
-      <div class="field">
-        <div class="input-wrap"><i data-feather="mail"></i><input type="email" placeholder="Email" required></div>
-      </div>
-      <div class="field">
-        <div class="input-wrap"><i data-feather="lock"></i><input type="password" placeholder="Password" required></div>
-      </div>
-      <button type="submit" class="btn btn-solid full-width"><i data-feather="user-plus"></i> Daftar</button>
-    </form>
-  </div>
-</div>
-
 <!-- toast -->
-<div class="toast" id="toast"><i data-feather="check-circle"></i><span id="toastMsg"></span></div>
+<div class="toast" id="toast"><span id="toastMsg"></span></div>
 
 <script src="asset/js/script.js" defer></script>
 </body>
