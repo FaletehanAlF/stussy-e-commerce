@@ -231,6 +231,7 @@
     var hero = document.querySelector('.hero');
     var heroTitle = document.querySelector('.hero-title');
     var heroContent = document.querySelector('.hero-content');
+    var productScene = document.querySelector('.hero-product-scene');
     if (!hero || !heroTitle) return;
 
     hero.setAttribute('data-parallax', '');
@@ -242,14 +243,18 @@
 
       var ratio = scrollY / heroH;
 
-      // Title parallax - moves slower than scroll
-      heroTitle.style.transform = 'translateY(' + (scrollY * 0.15) + 'px)';
+      heroTitle.style.transform = 'translateY(' + (scrollY * 0.12) + 'px)';
       heroTitle.style.opacity = 1 - ratio * 0.6;
 
-      // Content subtle fade
       if (heroContent) {
-        heroContent.style.transform = 'translateY(' + (scrollY * 0.08) + 'px)';
+        heroContent.style.transform = 'translateY(' + (scrollY * 0.06) + 'px)';
         heroContent.style.opacity = 1 - ratio * 0.4;
+      }
+
+      // Product scene slight parallax
+      if (productScene) {
+        productScene.style.transform = 'translateY(' + (scrollY * 0.1) + 'px)';
+        productScene.style.opacity = 1 - ratio * 0.5;
       }
     }, { passive: true });
   }
