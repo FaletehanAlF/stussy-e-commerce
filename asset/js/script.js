@@ -128,7 +128,7 @@ function renderProducts(products) {
     <article class="product-card" data-id="${p.id}">
       <div class="product-thumb">
         ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ''}
-        <img src="https://placehold.co/500x625/${p.color}/f3efe6?font=montserrat&text=${p.text}" alt="${p.name}" loading="lazy">
+        <img src="https://placehold.co/500x625/${p.color}/fff?font=montserrat&text=${p.text}" alt="${p.name}" loading="lazy">
         <button class="product-quick" aria-label="Lihat cepat ${p.name}"><i data-feather="eye"></i></button>
       </div>
       <div class="product-info">
@@ -312,11 +312,11 @@ function initNewsletterForm() {
     e.preventDefault();
     const input = form.querySelector('input[type="email"]');
     if (!input.value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) {
-      msg.style.color = '#d9482b';
+      msg.style.color = '#fff';
       msg.textContent = 'Masukkan email yang valid.';
       return;
     }
-    msg.style.color = '#6fbf73';
+    msg.style.color = '#fff';
     msg.textContent = 'Terima kasih! Kamu sudah terdaftar.';
     form.reset();
   });
