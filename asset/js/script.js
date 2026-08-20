@@ -1,6 +1,6 @@
 /* ==========================================================
    STUSSY LANDING — script.js
-   Pure B&W, zero-fetch, capsule navbar
+   Pure B&W, zero-fetch, capsule navbar, smooth & elegant
    ========================================================== */
 
 (function () {
@@ -28,6 +28,10 @@
     initContactForm();
     initNewsletter();
     initScrollReveal();
+    initHeroParallax();
+    initScrollProgress();
+    initSmoothCounters();
+    initSmoothAnchorLinks();
 
     var yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -55,7 +59,7 @@
       card.setAttribute('data-id', p.id);
       card.setAttribute('data-cat', p.cat);
       card.style.opacity = '0';
-      card.style.transform = 'translateY(24px)';
+      card.style.transform = 'translateY(32px)';
 
       var badgeHTML = p.badge
         ? '<span class="product-badge">' + p.badge + '</span>'
@@ -86,10 +90,10 @@
       grid.appendChild(card);
 
       setTimeout(function () {
-        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        card.style.transition = 'opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1)';
         card.style.opacity = '1';
         card.style.transform = 'translateY(0)';
-      }, 80 + i * 80);
+      }, 100 + i * 100);
     });
 
     bindAddToCart();
@@ -128,7 +132,7 @@
       });
       card.addEventListener('mouseleave', function () {
         card.style.transform = 'translateY(0)';
-        card.style.transition = 'transform 0.3s ease';
+        card.style.transition = 'transform 0.4s cubic-bezier(0.16,1,0.3,1)';
       });
     });
   }
@@ -139,8 +143,8 @@
     buttons.forEach(function (btn) {
       btn.addEventListener('click', function (e) {
         e.stopPropagation();
-        btn.style.transform = 'scale(1.3)';
-        setTimeout(function () { btn.style.transform = ''; }, 200);
+        btn.style.transform = 'scale(1.4)';
+        setTimeout(function () { btn.style.transform = ''; }, 250);
         showToast('Ditambahkan ke keranjang');
       });
     });
@@ -150,8 +154,25 @@
   function initNavbar() {
     var navbar = document.getElementById('navbar');
     if (!navbar) return;
+    var lastScroll = 0;
+
     window.addEventListener('scroll', function () {
-      navbar.classList.toggle('shrink', window.scrollY > 40);
+      var scrollY = window.scrollY;
+
+      // Shrink navbar after 40px scroll
+      navbar.classList.toggle('shrink', scrollY > 40);
+
+      // Hide navbar on scroll down, show on scroll up (only after 200px)
+      if (scrollY > 200) {
+        if (scrollY > lastScroll + 5) {
+          navbar.style.transform = 'translateY(-100%)';
+        } else if (scrollY < lastScroll - 5) {
+          navbar.style.transform = 'translateY(0)';
+        }
+      } else {
+        navbar.style.transform = 'translateY(0)';
+      }
+      lastScroll = scrollY;
     }, { passive: true });
   }
 
@@ -173,8 +194,14 @@
       btn.setAttribute('aria-expanded', String(isOpen));
     });
 
-    menu.querySelectorAll('.nav-link').forEach(function (link) {
+    menu.querySelectorAll('.mobile-link').forEach(function (link) {
       link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!btn.contains(e.target) && !menu.contains(e.target)) {
+        closeMenu();
+      }
     });
   }
 
@@ -213,6 +240,106 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
     els.forEach(function (el) { observer.observe(el); });
+  }
+
+  /* ==================== HERO PARALLAX ==================== */
+  function initHeroParallax() {
+    var hero = document.querySelector('.hero');
+    var heroTitle = document.querySelector('.hero-title');
+    var heroContent = document.querySelector('.hero-content');
+    if (!hero || !heroTitle) return;
+
+    hero.setAttribute('data-parallax', '');
+
+    window.addEventListener('scroll', function () {
+      var scrollY = window.scrollY;
+      var heroH = hero.offsetHeight;
+      if (scrollY > heroH) return;
+
+      var ratio = scrollY / heroH;
+
+      // Title parallax - moves slower than scroll
+      heroTitle.style.transform = 'translateY(' + (scrollY * 0.15) + 'px)';
+      heroTitle.style.opacity = 1 - ratio * 0.6;
+
+      // Content subtle fade
+      if (heroContent) {
+        heroContent.style.transform = 'translateY(' + (scrollY * 0.08) + 'px)';
+        heroContent.style.opacity = 1 - ratio * 0.4;
+      }
+    }, { passive: true });
+  }
+
+  /* ==================== SCROLL PROGRESS ==================== */
+  function initScrollProgress() {
+    var bar = document.createElement('div');
+    bar.className = 'scroll-progress';
+    document.body.appendChild(bar);
+
+    window.addEventListener('scroll', function () {
+      var scrollTop = window.scrollY;
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      var progress = docHeight > 0 ? scrollTop / docHeight : 0;
+      bar.style.transform = 'scaleX(' + progress + ')';
+    }, { passive: true });
+  }
+
+  /* ==================== ANIMATED COUNTERS ==================== */
+  function initSmoothCounters() {
+    var stats = document.querySelectorAll('.about-stat-num');
+    if (!stats.length) return;
+
+    var animated = false;
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting && !animated) {
+          animated = true;
+          stats.forEach(function (el) {
+            var text = el.textContent.trim();
+            // Only animate numeric values
+            var num = parseInt(text, 10);
+            if (isNaN(num) || num === 0) return;
+
+            var suffix = text.replace(String(num), '');
+            var duration = 1500;
+            var start = performance.now();
+
+            function tick(now) {
+              var elapsed = now - start;
+              var progress = Math.min(elapsed / duration, 1);
+              // Ease out cubic
+              var eased = 1 - Math.pow(1 - progress, 3);
+              el.textContent = Math.round(num * eased) + suffix;
+              if (progress < 1) requestAnimationFrame(tick);
+            }
+
+            el.textContent = '0' + suffix;
+            requestAnimationFrame(tick);
+          });
+          observer.disconnect();
+        }
+      });
+    }, { threshold: 0.3 });
+
+    var statsSection = document.querySelector('.about-stats');
+    if (statsSection) observer.observe(statsSection);
+  }
+
+  /* ==================== SMOOTH ANCHOR LINKS ==================== */
+  function initSmoothAnchorLinks() {
+    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+      anchor.addEventListener('click', function (e) {
+        var href = this.getAttribute('href');
+        if (!href || href === '#') return;
+        var target = document.querySelector(href);
+        if (!target) return;
+        e.preventDefault();
+        var offset = 80; // navbar height offset
+        var top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      });
+    });
   }
 
   /* ==================== CONTACT FORM ==================== */
