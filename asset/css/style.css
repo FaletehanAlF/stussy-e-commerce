@@ -123,7 +123,7 @@ input, textarea { font-family: inherit; }
 .hero-highlight-divider { width: 1px; height: 36px; background: var(--card-border); flex-shrink: 0; }
 
 /* ---------- HERO 3D PRODUCT SCENE ---------- */
-.hero-product-scene { position: relative; width: 100%; height: 480px; opacity: 0; animation: fadeIn 1s ease 0.6s forwards; }
+.hero-product-scene { position: relative; width: 100%; height: 500px; opacity: 0; animation: fadeIn 1s ease 0.6s forwards; }
 .hero-product-stage { position: relative; width: 100%; height: 100%; }
 
 .hero-product-card { position: absolute; border-radius: 12px; overflow: hidden; border: 1px solid var(--card-border); background: var(--card); box-shadow: 0 16px 48px rgba(0,0,0,0.5); transition: transform 0.5s cubic-bezier(0.16,1,0.3,1), box-shadow 0.5s ease; }
@@ -133,22 +133,22 @@ input, textarea { font-family: inherit; }
 .hero-pcard-name { font-family: var(--font-display); font-weight: 700; font-size: 15px; text-transform: uppercase; color: var(--fg); }
 .hero-pcard-price { font-family: var(--font-mono); font-size: 11px; font-weight: 500; color: var(--fg); margin-top: 2px; }
 
-/* Card 1 — besar, atas kiri, tilt kiri */
-.hero-pcard-1 { width: 170px; height: 230px; top: 0; left: 5%; transform: rotate(-5deg); z-index: 3; }
+/* Card 1 — kiri atas */
+.hero-pcard-1 { width: 160px; height: 220px; top: 0; left: 0; transform: rotate(-4deg); z-index: 3; }
 .hero-pcard-1 img { filter: grayscale(20%) brightness(0.9); }
-.hero-pcard-1:hover { transform: rotate(-5deg) scale(1.05) translateY(-8px); box-shadow: 0 28px 64px rgba(0,0,0,0.6); }
+.hero-pcard-1:hover { transform: rotate(-4deg) scale(1.05) translateY(-8px); box-shadow: 0 28px 64px rgba(0,0,0,0.6); }
 .hero-pcard-1:hover img { filter: grayscale(0%) brightness(1); }
 
-/* Card 2 — kecil, bawah tengah, tilt kanan */
-.hero-pcard-2 { width: 170px; height: 230px; bottom: 0; left: 50%; transform: translateX(-50%) rotate(6deg); z-index: 2; }
+/* Card 2 — tengah bawah */
+.hero-pcard-2 { width: 160px; height: 220px; bottom: 0; left: 50%; transform: translateX(-50%) rotate(3deg); z-index: 2; }
 .hero-pcard-2 img { filter: grayscale(50%) brightness(0.7); }
-.hero-pcard-2:hover { transform: translateX(-50%) rotate(6deg) scale(1.06) translateY(-6px); box-shadow: 0 24px 56px rgba(0,0,0,0.5); }
+.hero-pcard-2:hover { transform: translateX(-50%) rotate(3deg) scale(1.06) translateY(-6px); box-shadow: 0 24px 56px rgba(0,0,0,0.5); }
 .hero-pcard-2:hover img { filter: grayscale(0%) brightness(0.9); }
 
-/* Card 3 — sedang, kanan atas, tilt kanan landai */
-.hero-pcard-3 { width: 170px; height: 230px; top: 40px; right: 5%; transform: rotate(4deg); z-index: 1; }
+/* Card 3 — kanan tengah */
+.hero-pcard-3 { width: 160px; height: 220px; top: 120px; right: 0; transform: rotate(5deg); z-index: 1; }
 .hero-pcard-3 img { filter: grayscale(50%) brightness(0.7); }
-.hero-pcard-3:hover { transform: rotate(4deg) scale(1.06) translateY(-6px); box-shadow: 0 24px 56px rgba(0,0,0,0.5); }
+.hero-pcard-3:hover { transform: rotate(5deg) scale(1.06) translateY(-6px); box-shadow: 0 24px 56px rgba(0,0,0,0.5); }
 .hero-pcard-3:hover img { filter: grayscale(0%) brightness(0.9); }
 
 .hero-product-shadow { display: none; }
@@ -320,10 +320,10 @@ input, textarea { font-family: inherit; }
   .hero-sub { max-width: 100%; }
   .hero-cta { justify-content: center; }
   .hero-highlights { justify-content: center; }
-  .hero-product-scene { height: 320px; margin-top: 10px; }
-  .hero-pcard-1 { width: 145px; height: 195px; left: 10%; }
-  .hero-pcard-2 { width: 145px; height: 195px; }
-  .hero-pcard-3 { width: 145px; height: 195px; top: 20px; }
+  .hero-product-scene { height: 340px; margin-top: 10px; }
+  .hero-pcard-1 { width: 130px; height: 180px; }
+  .hero-pcard-2 { width: 130px; height: 180px; }
+  .hero-pcard-3 { width: 130px; height: 180px; top: 90px; }
   .about-grid { grid-template-columns: 1fr; }
   .about-visual { height: 280px; margin: 0 auto; max-width: 460px; width: 100%; }
   .about-card { width: 200px; height: 140px; }
@@ -363,10 +363,10 @@ input, textarea { font-family: inherit; }
   .hero-highlights { flex-direction: column; align-items: center; gap: 12px; }
   .hero-highlight-item { padding: 0; flex-direction: row; gap: 12px; }
   .hero-highlight-divider { width: 40px; height: 1px; }
-  .hero-product-scene { height: 270px; }
-  .hero-pcard-1 { width: 120px; height: 160px; left: 5%; }
-  .hero-pcard-2 { width: 120px; height: 160px; }
-  .hero-pcard-3 { width: 120px; height: 160px; top: 10px; }
+  .hero-product-scene { height: 290px; }
+  .hero-pcard-1 { width: 110px; height: 150px; }
+  .hero-pcard-2 { width: 110px; height: 150px; }
+  .hero-pcard-3 { width: 110px; height: 150px; top: 75px; }
   .category-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .product-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
   .review-track { grid-template-columns: 1fr; }
