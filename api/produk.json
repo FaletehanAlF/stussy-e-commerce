@@ -1,0 +1,82 @@
+[
+  {
+    "id": "p01",
+    "name": "8-Ball Tee",
+    "category": "tees",
+    "price": 449000,
+    "badge": "NEW",
+    "color": "1c1f29",
+    "text": "8-BALL%20TEE",
+    "desc": "Katun 240gsm, sablon puff signature bola 8."
+  },
+  {
+    "id": "p02",
+    "name": "Stock Hoodie",
+    "category": "hoodies",
+    "price": 899000,
+    "badge": "BEST SELLER",
+    "color": "2b2f3d",
+    "text": "STOCK%20HOODIE",
+    "desc": "Fleece 380gsm brushed, box logo bordir dada."
+  },
+  {
+    "id": "p03",
+    "name": "World Tour Cap",
+    "category": "headwear",
+    "price": 359000,
+    "badge": "",
+    "color": "d9482b",
+    "text": "WORLD%20TOUR%20CAP",
+    "desc": "6-panel twill, strapback logam anti karat."
+  },
+  {
+    "id": "p04",
+    "name": "Basic Script Tee",
+    "category": "tees",
+    "price": 399000,
+    "badge": "",
+    "color": "16181f",
+    "text": "SCRIPT%20TEE",
+    "desc": "Signature script di dada, potongan boxy fit."
+  },
+  {
+    "id": "p05",
+    "name": "Work Jacket",
+    "category": "outerwear",
+    "price": 1249000,
+    "badge": "LIMITED",
+    "color": "3a2e26",
+    "text": "WORK%20JACKET",
+    "desc": "Canvas 12oz, lapisan flannel, kancing logam."
+  },
+  {
+    "id": "p06",
+    "name": "Half Zip Mock",
+    "category": "hoodies",
+    "price": 799000,
+    "badge": "",
+    "color": "232733",
+    "text": "HALF%20ZIP",
+    "desc": "Rib collar, zipper YKK, cocok layering."
+  },
+  {
+    "id": "p07",
+    "name": "Chain Stitch Beanie",
+    "category": "headwear",
+    "price": 259000,
+    "badge": "NEW",
+    "color": "d9482b",
+    "text": "BEANIE",
+    "desc": "Rajut akrilik tebal, label chain-stitch."
+  },
+  {
+    "id": "p08",
+    "name": "Tool Bag Crossbody",
+    "category": "accessories",
+    "price": 549000,
+    "badge": "",
+    "color": "1c1f29",
+    "text": "TOOL%20BAG",
+    "desc": "Cordura 1000D, strap adjustable, water resist."
+  }
+]

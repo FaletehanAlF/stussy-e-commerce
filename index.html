@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STÜSSY — International Stüssy Tribe</title>
+<meta name="description" content="Landing page promosi e-commerce bertema Stüssy. Streetwear sejak 1980, dari pantai ke jalanan.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.1/feather.min.js" defer></script>
+<link rel="stylesheet" href="/asset/css/style.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo" aria-label="STÜSSY Home">
+      <span class="logo-mark">S</span>
+      <span class="logo-word">STÜSSY</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#category" class="nav-link">Category</a>
+      <a href="#produk" class="nav-link">Produk</a>
+      <a href="#review" class="nav-link">Review</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="searchBtn" aria-label="Cari produk">
+        <i data-feather="search"></i>
+      </button>
+      <button class="icon-btn" id="cartBtn" aria-label="Keranjang belanja">
+        <i data-feather="shopping-bag"></i>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="btn btn-ghost" id="loginBtn">Login</button>
+      <button class="btn btn-solid" id="registerBtn">Register</button>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" class="nav-link">Home</a>
+  <a href="#about" class="nav-link">About</a>
+  <a href="#category" class="nav-link">Category</a>
+  <a href="#produk" class="nav-link">Produk</a>
+  <a href="#review" class="nav-link">Review</a>
+  <a href="#contact" class="nav-link">Contact</a>
+  <div class="mobile-actions">
+    <button class="btn btn-ghost" id="loginBtnMobile">Login</button>
+    <button class="btn btn-solid" id="registerBtnMobile">Register</button>
+  </div>
+</div>
+
+<main>
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="hero-marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>INTERNATIONAL STÜSSY TRIBE ✦ SEJAK 1980 ✦ FROM THE BEACH TO THE STREET ✦ DROP 09 ✦ </span>
+      <span>INTERNATIONAL STÜSSY TRIBE ✦ SEJAK 1980 ✦ FROM THE BEACH TO THE STREET ✦ DROP 09 ✦ </span>
+    </div>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">// DROP 09 — SEKARANG TERSEDIA</p>
+      <h1 class="hero-title">
+        SERAGAM JALANAN<br>
+        UNTUK YANG <span class="stroke-text">TAK TERUSIK</span>
+      </h1>
+      <p class="hero-desc">
+        Dari garasi surfing California tahun 80-an sampai ke sudut jalan kotamu.
+        Stüssy bukan sekadar merek — ini tanda pengenal komunitas.
+      </p>
+      <div class="hero-cta">
+        <a href="#produk" class="btn btn-solid btn-lg">Belanja Sekarang</a>
+        <a href="#about" class="btn btn-outline btn-lg">Cerita Kami</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>40+</strong><span>Tahun Warisan</span></div>
+        <div class="stat"><strong>120K</strong><span>Anggota Tribe</span></div>
+        <div class="stat"><strong>4.9/5</strong><span>Rating Pembeli</span></div>
+      </div>
+    </div>
+
+    <div class="hero-stage">
+      <div class="cube-wrap" id="cubeWrap">
+        <div class="cube" id="cube3d">
+          <div class="face front"><span>STÜSSY</span></div>
+          <div class="face back"><span>STÜSSY</span></div>
+          <div class="face right"><span>STÜSSY</span></div>
+          <div class="face left"><span>STÜSSY</span></div>
+          <div class="face top"><span>STÜSSY</span></div>
+          <div class="face bottom"><span>STÜSSY</span></div>
+        </div>
+      </div>
+      <p class="cube-hint">Gerakkan kursor — box logo 3D</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="about" id="about">
+  <div class="section-inner about-grid">
+    <div class="about-visual" aria-hidden="true">
+      <div class="about-card card-1">
+        <span class="tag-label">EST.</span>
+        <span class="tag-big">1980</span>
+      </div>
+      <div class="about-card card-2">
+        <span class="tag-label">ORIGIN</span>
+        <span class="tag-big">CALIFORNIA</span>
+      </div>
+    </div>
+    <div class="about-content">
+      <p class="eyebrow">// ABOUT</p>
+      <h2 class="section-title">Dari Papan Selancar<br>ke Budaya Global</h2>
+      <p class="about-text">
+        Shawn Stussy mulai menuliskan tanda tangannya di papan selancar buatan tangan.
+        Coretan spidol itu kini menjadi salah satu logo paling dikenali di dunia streetwear.
+        Kami merawat semangat yang sama: dibuat oleh komunitas, untuk komunitas — santai,
+        jujur, dan tidak berusaha keras untuk terlihat keren.
+      </p>
+      <ul class="about-list">
+        <li><i data-feather="check-circle"></i> Material dipilih tangan, teruji lapangan</li>
+        <li><i data-feather="check-circle"></i> Produksi terbatas tiap drop</li>
+        <li><i data-feather="check-circle"></i> Kolaborasi lintas kota &amp; komunitas</li>
+      </ul>
+      <a href="#produk" class="btn btn-outline">Lihat Koleksi <i data-feather="arrow-up-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CATEGORY ================= -->
+<section class="category" id="category">
+  <div class="section-inner">
+    <p class="eyebrow center">// CATEGORY</p>
+    <h2 class="section-title center">Pilih Gaya-mu</h2>
+    <div class="category-grid" id="categoryGrid">
+      <button class="cat-card" data-filter="tees">
+        <i data-feather="crop"></i>
+        <span>Tees</span>
+      </button>
+      <button class="cat-card" data-filter="hoodies">
+        <i data-feather="wind"></i>
+        <span>Hoodies</span>
+      </button>
+      <button class="cat-card" data-filter="headwear">
+        <i data-feather="circle"></i>
+        <span>Headwear</span>
+      </button>
+      <button class="cat-card" data-filter="outerwear">
+        <i data-feather="cloud-snow"></i>
+        <span>Outerwear</span>
+      </button>
+      <button class="cat-card" data-filter="accessories">
+        <i data-feather="watch"></i>
+        <span>Accessories</span>
+      </button>
+      <button class="cat-card active" data-filter="all">
+        <i data-feather="grid"></i>
+        <span>Semua</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRODUK ================= -->
+<section class="produk" id="produk">
+  <div class="section-inner">
+    <div class="produk-head">
+      <div>
+        <p class="eyebrow">// PRODUK</p>
+        <h2 class="section-title">Drop Terbaru</h2>
+      </div>
+      <p class="produk-sub">Stok terbatas, tidak ada restock untuk sebagian item. Ambil sebelum habis.</p>
+    </div>
+
+    <div class="product-grid" id="productGrid">
+      <!-- diisi otomatis oleh js/script.js dari data/products.json -->
+      <div class="loading-state" id="loadingState">
+        <i data-feather="loader"></i> Memuat produk...
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REVIEW ================= -->
+<section class="review" id="review">
+  <div class="section-inner">
+    <p class="eyebrow center">// REVIEW</p>
+    <h2 class="section-title center">Kata Tribe Kami</h2>
+
+    <div class="review-track" id="reviewTrack">
+      <article class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Bahan hoodie-nya tebal banget, jahitan rapi. Pas dipakai gak panas walau brushed fleece."</p>
+        <div class="reviewer"><span class="avatar">RA</span><div><strong>Raka A.</strong><small>Jakarta</small></div></div>
+      </article>
+      <article class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Sablon puff di tee-nya awet, udah 2 tahun dicuci bolak-balik masih bagus."</p>
+        <div class="reviewer"><span class="avatar">DN</span><div><strong>Dinda N.</strong><small>Bandung</small></div></div>
+      </article>
+      <article class="review-card">
+        <div class="stars">★★★★☆</div>
+        <p>"Ukuran true to size, cocok buat boxy fit. Pengiriman cepat, packing aman."</p>
+        <div class="reviewer"><span class="avatar">FM</span><div><strong>Fikri M.</strong><small>Surabaya</small></div></div>
+      </article>
+      <article class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Cap-nya solid, strapback logamnya kokoh. Worth banget buat harian."</p>
+        <div class="reviewer"><span class="avatar">SW</span><div><strong>Sinta W.</strong><small>Bogor</small></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <div class="section-inner contact-grid">
+    <div class="contact-info">
+      <p class="eyebrow">// CONTACT</p>
+      <h2 class="section-title">Ada Pertanyaan?<br>Kabari Kami</h2>
+      <p class="about-text">Tim kami balas dalam 1x24 jam pada hari kerja.</p>
+
+      <div class="info-item"><i data-feather="map-pin"></i> Jl. Pantai Santai No. 8, Bandung, Indonesia</div>
+      <div class="info-item"><i data-feather="mail"></i> hello@stussy-tribe.id</div>
+      <div class="info-item"><i data-feather="phone"></i> +62 812-3456-7890</div>
+
+      <div class="social-row">
+        <a href="#" class="icon-btn" aria-label="Instagram"><i data-feather="instagram"></i></a>
+        <a href="#" class="icon-btn" aria-label="Twitter"><i data-feather="twitter"></i></a>
+        <a href="#" class="icon-btn" aria-label="Youtube"><i data-feather="youtube"></i></a>
+      </div>
+    </div>
+
+    <form class="contact-form" id="contactForm" novalidate>
+      <div class="field">
+        <label for="username">Username</label>
+        <div class="input-wrap">
+          <i data-feather="user"></i>
+          <input type="text" id="username" name="username" placeholder="nama_kamu" required minlength="3">
+        </div>
+        <span class="field-error" id="err-username"></span>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <div class="input-wrap">
+          <i data-feather="mail"></i>
+          <input type="email" id="email" name="email" placeholder="kamu@email.com" required>
+        </div>
+        <span class="field-error" id="err-email"></span>
+      </div>
+
+      <div class="field">
+        <label for="message">Message</label>
+        <div class="input-wrap textarea-wrap">
+          <i data-feather="message-square"></i>
+          <textarea id="message" name="message" rows="4" placeholder="Tulis pesanmu di sini..." required minlength="10"></textarea>
+        </div>
+        <span class="field-error" id="err-message"></span>
+      </div>
+
+      <button type="submit" class="btn btn-solid btn-lg full-width">
+        Kirim Pesan <i data-feather="send"></i>
+      </button>
+
+      <p class="form-success" id="formSuccess">
+        <i data-feather="check-circle"></i> Pesan terkirim! Kami akan segera menghubungimu.
+      </p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="section-inner footer-grid">
+    <div class="footer-brand">
+      <a href="#home" class="logo">
+        <span class="logo-mark">S</span>
+        <span class="logo-word">STÜSSY</span>
+      </a>
+      <p>International Stüssy Tribe. Streetwear sejak 1980, dibuat oleh komunitas untuk komunitas.</p>
+      <div class="social-row">
+        <a href="#" class="icon-btn" aria-label="Instagram"><i data-feather="instagram"></i></a>
+        <a href="#" class="icon-btn" aria-label="Twitter"><i data-feather="twitter"></i></a>
+        <a href="#" class="icon-btn" aria-label="Youtube"><i data-feather="youtube"></i></a>
+        <a href="#" class="icon-btn" aria-label="Facebook"><i data-feather="facebook"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Belanja</h4>
+      <a href="#produk">Semua Produk</a>
+      <a href="#category">Tees</a>
+      <a href="#category">Hoodies</a>
+      <a href="#category">Headwear</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Perusahaan</h4>
+      <a href="#about">Tentang Kami</a>
+      <a href="#review">Review</a>
+      <a href="#contact">Kontak</a>
+      <a href="#">Karier</a>
+    </div>
+
+    <div class="footer-col newsletter-col">
+      <h4>Newsletter</h4>
+      <p>Info drop terbaru langsung ke email-mu.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Email kamu" required aria-label="Email newsletter">
+        <button type="submit" aria-label="Subscribe"><i data-feather="arrow-right"></i></button>
+      </form>
+      <span class="newsletter-msg" id="newsletterMsg"></span>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Stüssy Tribe. Landing page demo — bukan situs resmi.</p>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= AUTH MODAL ================= -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Tutup"><i data-feather="x"></i></button>
+    <div class="modal-tabs">
+      <button class="modal-tab active" data-tab="login" id="tabLogin">Login</button>
+      <button class="modal-tab" data-tab="register" id="tabRegister">Register</button>
+    </div>
+
+    <form class="modal-form active" id="loginForm">
+      <h3 id="modalTitle">Selamat Datang Kembali</h3>
+      <div class="field">
+        <div class="input-wrap"><i data-feather="mail"></i><input type="email" placeholder="Email" required></div>
+      </div>
+      <div class="field">
+        <div class="input-wrap"><i data-feather="lock"></i><input type="password" placeholder="Password" required></div>
+      </div>
+      <button type="submit" class="btn btn-solid full-width">Masuk</button>
+    </form>
+
+    <form class="modal-form" id="registerForm">
+      <h3>Gabung Tribe</h3>
+      <div class="field">
+        <div class="input-wrap"><i data-feather="user"></i><input type="text" placeholder="Username" required></div>
+      </div>
+      <div class="field">
+        <div class="input-wrap"><i data-feather="mail"></i><input type="email" placeholder="Email" required></div>
+      </div>
+      <div class="field">
+        <div class="input-wrap"><i data-feather="lock"></i><input type="password" placeholder="Password" required></div>
+      </div>
+      <button type="submit" class="btn btn-solid full-width">Daftar</button>
+    </form>
+  </div>
+</div>
+
+<!-- toast -->
+<div class="toast" id="toast"><i data-feather="check-circle"></i><span id="toastMsg"></span></div>
+
+<script src="/asset/js/script.js" defer></script>
+</body>
+</html>
