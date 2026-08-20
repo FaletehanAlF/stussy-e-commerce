@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STUSSY — Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Permanent+Marker&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../asset/css/dashboard.css">
+</head>
+<body>
+
+<aside class="dash-sidebar">
+  <div class="dash-logo">
+    <a href="../index.html">
+      <img src="https://i.pinimg.com/736x/df/c0/4a/dfc04af97dde2af59d2bb81ca39d3ee2.jpg" alt="STUSSY" class="dash-logo-img">
+    </a>
+    <span class="dash-logo-text">Admin Panel</span>
+  </div>
+  <nav class="dash-nav">
+    <a href="#" class="dash-nav-link active">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+      Dashboard
+    </a>
+    <a href="#" class="dash-nav-link">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      Produk
+    </a>
+    <a href="#" class="dash-nav-link">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      Pelanggan
+    </a>
+    <a href="#" class="dash-nav-link">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+      Transaksi
+    </a>
+  </nav>
+  <div class="dash-footer">
+    <a href="../index.html" class="dash-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      Kembali ke Toko
+    </a>
+  </div>
+</aside>
+
+<main class="dash-main">
+  <header class="dash-topbar">
+    <h1 class="dash-title">Dashboard</h1>
+    <div class="dash-user">
+      <div class="dash-user-avatar">A</div>
+      <span>Admin</span>
+    </div>
+  </header>
+
+  <section class="dash-stats">
+    <div class="dash-stat-card">
+      <div class="dash-stat-icon dash-stat-icon-1">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      </div>
+      <div class="dash-stat-info">
+        <span class="dash-stat-num" data-target="284500000">0</span>
+        <span class="dash-stat-label">Total Pendapatan</span>
+      </div>
+    </div>
+    <div class="dash-stat-card">
+      <div class="dash-stat-icon dash-stat-icon-2">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      </div>
+      <div class="dash-stat-info">
+        <span class="dash-stat-num" data-target="1284">0</span>
+        <span class="dash-stat-label">Total Pesanan</span>
+      </div>
+    </div>
+    <div class="dash-stat-card">
+      <div class="dash-stat-icon dash-stat-icon-3">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <div class="dash-stat-info">
+        <span class="dash-stat-num" data-target="2847">0</span>
+        <span class="dash-stat-label">Total Pelanggan</span>
+      </div>
+    </div>
+    <div class="dash-stat-card">
+      <div class="dash-stat-icon dash-stat-icon-4">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+      </div>
+      <div class="dash-stat-info">
+        <span class="dash-stat-num" data-target="156">0</span>
+        <span class="dash-stat-label">Total Produk</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="dash-grid">
+    <div class="dash-card dash-card-recent">
+      <h3 class="dash-card-title">Pesanan Terbaru</h3>
+      <div class="dash-table-wrap">
+        <table class="dash-table">
+          <thead>
+            <tr><th>ID</th><th>Pelanggan</th><th>Produk</th><th>Total</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>#STY-2847</td><td>Raka Pratama</td><td>8-Ball Tee</td><td>Rp449.000</td><td><span class="dash-badge dash-badge-success">Dikirim</span></td></tr>
+            <tr><td>#STY-2846</td><td>Anisa Putri</td><td>Stock Hoodie</td><td>Rp899.000</td><td><span class="dash-badge dash-badge-warning">Diproses</span></td></tr>
+            <tr><td>#STY-2845</td><td>Dani Kurnia</td><td>World Tour Cap</td><td>Rp359.000</td><td><span class="dash-badge dash-badge-success">Dikirim</span></td></tr>
+            <tr><td>#STY-2844</td><td>Sari Dewi</td><td>Cargo Pant</td><td>Rp699.000</td><td><span class="dash-badge dash-badge-danger">Batal</span></td></tr>
+            <tr><td>#STY-2843</td><td>Yoga Aditya</td><td>8-Ball Tee</td><td>Rp449.000</td><td><span class="dash-badge dash-badge-success">Selesai</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="dash-card dash-card-chart">
+      <h3 class="dash-card-title">Penjualan Bulanan</h3>
+      <div class="dash-chart" id="dashChart"></div>
+    </div>
+  </section>
+</main>
+
+<script src="../asset/js/dashboard.js"></script>
+</body>
+</html>
