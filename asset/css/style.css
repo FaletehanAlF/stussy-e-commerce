@@ -70,7 +70,7 @@ input, textarea { font-family: inherit; }
 :focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
 
 /* ==================== NAVBAR CAPSULE ==================== */
-.navbar { position: sticky; top: 0; z-index: 100; padding: 12px 24px; transition: transform 0.4s cubic-bezier(0.16,1,0.3,1); will-change: transform; }
+.navbar { position: sticky; top: 0; z-index: 100; padding: 12px 24px; }
 .nav-inner { max-width: var(--container); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: var(--card); border: 1px solid var(--card-border); border-radius: 999px; padding: 8px 24px 8px 28px; transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; }
 .navbar.shrink .nav-inner { background: rgba(17,17,17,0.92); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-color: rgba(255,255,255,0.06); box-shadow: 0 4px 30px rgba(0,0,0,0.4); }
 
@@ -92,7 +92,6 @@ input, textarea { font-family: inherit; }
 .nav-actions { display: flex; align-items: center; gap: 12px; margin-left: 8px; }
 .btn-nav { padding: 8px 18px; font-size: 11px; border-radius: 999px; transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease; }
 .btn-nav:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(255,255,255,0.12); }
-.navbar.shrink .btn-nav { padding: 6px 16px; font-size: 10px; }
 
 .mobile-menu { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%) translateY(-120%); width: calc(100% - 48px); max-width: var(--container); background: var(--card); border: 1px solid var(--card-border); border-radius: 16px; display: flex; flex-direction: column; padding: 8px 0; gap: 0; transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), visibility 0.3s ease, opacity 0.3s ease; z-index: 99; overflow: hidden; pointer-events: none; visibility: hidden; opacity: 0; }
 .mobile-menu.open { transform: translateX(-50%) translateY(0); pointer-events: auto; visibility: visible; opacity: 1; }

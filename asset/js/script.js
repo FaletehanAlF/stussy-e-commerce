@@ -154,25 +154,9 @@
   function initNavbar() {
     var navbar = document.getElementById('navbar');
     if (!navbar) return;
-    var lastScroll = 0;
 
     window.addEventListener('scroll', function () {
-      var scrollY = window.scrollY;
-
-      // Shrink navbar after 40px scroll
-      navbar.classList.toggle('shrink', scrollY > 40);
-
-      // Hide navbar on scroll down, show on scroll up (only after 200px)
-      if (scrollY > 200) {
-        if (scrollY > lastScroll + 5) {
-          navbar.style.transform = 'translateY(-100%)';
-        } else if (scrollY < lastScroll - 5) {
-          navbar.style.transform = 'translateY(0)';
-        }
-      } else {
-        navbar.style.transform = 'translateY(0)';
-      }
-      lastScroll = scrollY;
+      navbar.classList.toggle('shrink', window.scrollY > 40);
     }, { passive: true });
   }
 
