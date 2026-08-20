@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbarScroll();
   initMobileMenu();
   initSmoothActiveLink();
-  initHeroCube();
   loadProducts();
   initCategoryFilter();
   initAuthModal();
@@ -85,26 +84,6 @@ function initSmoothActiveLink() {
   }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
 
   sections.forEach(section => observer.observe(section));
-}
-
-/* ---------- 3D Cube tilt on mouse move ---------- */
-function initHeroCube() {
-  const wrap = document.getElementById('cubeWrap');
-  const cube = document.getElementById('cube3d');
-  if (!wrap || !cube) return;
-
-  wrap.addEventListener('mousemove', (e) => {
-    const rect = wrap.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-    const rotY = x * 60;
-    const rotX = y * -60;
-    cube.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg)`;
-  });
-
-  wrap.addEventListener('mouseleave', () => {
-    cube.style.transform = '';
-  });
 }
 
 /* ---------- Load produk dari products.json ---------- */
