@@ -279,20 +279,21 @@
           animated = true;
           stats.forEach(function (el) {
             var text = el.textContent.trim();
-            // Only animate numeric values
-            var num = parseInt(text, 10);
+            var isFloat = text.indexOf('.') !== -1;
+            var num = isFloat ? parseFloat(text) : parseInt(text, 10);
             if (isNaN(num) || num === 0) return;
 
             var suffix = text.replace(String(num), '');
             var duration = 1500;
             var start = performance.now();
+            var decimals = isFloat ? (text.split('.')[1] || '').replace(/[^0-9]/g, '').length : 0;
 
             function tick(now) {
               var elapsed = now - start;
               var progress = Math.min(elapsed / duration, 1);
-              // Ease out cubic
               var eased = 1 - Math.pow(1 - progress, 3);
-              el.textContent = Math.round(num * eased) + suffix;
+              var current = num * eased;
+              el.textContent = (decimals > 0 ? current.toFixed(decimals) : Math.round(current)) + suffix;
               if (progress < 1) requestAnimationFrame(tick);
             }
 
