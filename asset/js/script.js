@@ -31,6 +31,7 @@
     initHeroParallax();
     initScrollProgress();
     initSmoothCounters();
+    initHeroCounters();
     initSmoothAnchorLinks();
 
     var yearEl = document.getElementById('year');
@@ -307,6 +308,40 @@
 
     var statsSection = document.querySelector('.about-stats');
     if (statsSection) observer.observe(statsSection);
+  }
+
+  /* ==================== HERO COUNTERS & SOCIAL PROOF ==================== */
+  function initHeroCounters() {
+    var counters = document.querySelectorAll('.hero-sp-num, .hero-hl-counter');
+    if (!counters.length) return;
+
+    var animated = false;
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting && !animated) {
+          animated = true;
+          counters.forEach(function (el) {
+            var target = parseInt(el.getAttribute('data-target'), 10);
+            if (isNaN(target) || target === 0) return;
+            var duration = 1800;
+            var start = performance.now();
+
+            function tick(now) {
+              var elapsed = now - start;
+              var progress = Math.min(elapsed / duration, 1);
+              var eased = 1 - Math.pow(1 - progress, 3);
+              el.textContent = Math.round(target * eased).toLocaleString('id-ID');
+              if (progress < 1) requestAnimationFrame(tick);
+            }
+            requestAnimationFrame(tick);
+          });
+          observer.disconnect();
+        }
+      });
+    }, { threshold: 0.3 });
+
+    var hero = document.querySelector('.hero');
+    if (hero) observer.observe(hero);
   }
 
   /* ==================== SMOOTH ANCHOR LINKS ==================== */
