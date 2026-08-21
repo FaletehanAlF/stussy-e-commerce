@@ -1466,15 +1466,6 @@ textarea {
   border-bottom: 1px solid var(--card-border);
   background: var(--bg-alt);
 }
-.collab-label {
-  text-align: center;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 28px;
-}
 .collab-track {
   display: flex;
   align-items: center;
@@ -1507,7 +1498,6 @@ textarea {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
-  margin-top: 48px;
 }
 .abstract-card {
   position: relative;
@@ -1785,14 +1775,8 @@ textarea {
   .abstract {
     padding: 64px 0;
   }
-  .abstract-grid {
-    margin-top: 32px;
-  }
   .collab-loop {
     padding: 28px 0 32px;
-  }
-  .collab-label {
-    margin-bottom: 20px;
   }
   .collab-logo {
     height: 28px;
