@@ -1470,12 +1470,18 @@ textarea {
   display: flex;
   align-items: center;
   width: max-content;
-  animation: marquee-scroll 30s linear infinite;
+  animation: marquee-scroll 60s linear infinite;
+}
+.collab-set {
+  display: flex;
+  align-items: center;
+  gap: 88px;
+  padding-right: 88px;
+  flex-shrink: 0;
 }
 .collab-logo {
   height: 44px;
   width: auto;
-  margin-right: 88px;
   flex-shrink: 0;
   opacity: 0.45;
   filter: grayscale(100%);
@@ -1725,9 +1731,12 @@ textarea {
   .contact-grid {
     grid-template-columns: 1fr;
   }
+  .collab-set {
+    gap: 56px;
+    padding-right: 56px;
+  }
   .collab-logo {
     height: 34px;
-    margin-right: 56px;
   }
 }
 
@@ -1738,9 +1747,12 @@ textarea {
   .collab-loop {
     padding: 28px 0 32px;
   }
+  .collab-set {
+    gap: 40px;
+    padding-right: 40px;
+  }
   .collab-logo {
     height: 28px;
-    margin-right: 40px;
   }
   .navbar {
     padding: 8px 12px;
