@@ -851,8 +851,8 @@ textarea {
 }
 .about-card {
   position: absolute;
-  width: 240px;
-  height: 160px;
+  width: 260px;
+  height: 260px;
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--card-border);
@@ -1667,14 +1667,14 @@ textarea {
     grid-template-columns: 1fr;
   }
   .about-visual {
-    height: 280px;
+    height: 300px;
     margin: 0 auto;
-    max-width: 460px;
+    max-width: 500px;
     width: 100%;
   }
   .about-card {
-    width: 200px;
-    height: 140px;
+    width: 220px;
+    height: 220px;
   }
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1842,7 +1842,7 @@ textarea {
   }
   .about-card {
     width: 160px;
-    height: 120px;
+    height: 160px;
   }
   .about-card-year {
     font-size: 24px;
