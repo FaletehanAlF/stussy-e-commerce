@@ -104,7 +104,7 @@ input, textarea { font-family: inherit; }
 
 /* ---------- HERO ---------- */
 .hero { padding-top: 8px; overflow: hidden; position: relative; background: #000; }
-.hero::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1557682250-33bd709cbe85?w=1920&q=80') center/cover no-repeat; opacity: 0.25; pointer-events: none; }
+.hero::before { content: ''; position: absolute; inset: 0; background: url('https://i.pinimg.com/1200x/d5/1d/fc/d51dfc2cd908221652cc9968a996e3ce.jpg') center/cover no-repeat; opacity: 0.25; pointer-events: none; }
 .hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.6) 100%); pointer-events: none; }
 .hero > * { position: relative; z-index: 1; }
 .hero-inner { max-width: var(--container); margin: 0 auto; padding: 100px 24px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; min-height: 80vh; }
