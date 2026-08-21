@@ -1489,39 +1489,6 @@ textarea {
   animation-play-state: paused;
 }
 
-/* ==================== ABSTRACT ==================== */
-.abstract {
-  padding: 96px 0;
-  background: var(--bg);
-}
-.abstract-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
-.abstract-card {
-  position: relative;
-  aspect-ratio: 1 / 1;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--card-border);
-  background: var(--card);
-}
-.abstract-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  filter: grayscale(35%) contrast(1.05);
-  transition:
-    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-    filter 0.6s ease;
-}
-.abstract-card:hover img {
-  transform: scale(1.06);
-  filter: grayscale(0%) contrast(1);
-}
-
 /* ---------- FOOTER ---------- */
 .footer {
   background: var(--bg);
@@ -1758,10 +1725,6 @@ textarea {
   .contact-grid {
     grid-template-columns: 1fr;
   }
-  .abstract-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-  }
   .collab-logo {
     height: 34px;
     margin-right: 56px;
@@ -1771,9 +1734,6 @@ textarea {
 @media (max-width: 560px) {
   .section-inner {
     padding: 0 16px;
-  }
-  .abstract {
-    padding: 64px 0;
   }
   .collab-loop {
     padding: 28px 0 32px;
